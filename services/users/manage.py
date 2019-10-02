@@ -31,8 +31,8 @@ def recreate_db():
 @cli.command('seed_db')
 def seed_db():
     """Seeds the database."""
-    db.session.add(User(username='fred', email="fred@fred.com"))
-    db.session.add(User(username='homer', email="homer@simpson.org"))
+    db.session.add(User(username='fred', email="fred@fred.com", password="thisisatest"))
+    db.session.add(User(username='homer', email="homer@simpson.org", password="thisisatest"))
     db.session.commit()
 
 @cli.command()
@@ -55,6 +55,7 @@ def cov():
         print('Coverage Summary:')
         COV.report()
         COV.html_report()
+        COV.xml_report(outfile='htmlcov/coverage.xml')
         COV.erase()
         return 0
     sys.exit(result)
