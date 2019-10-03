@@ -9,14 +9,13 @@
     }
 }]*/
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom';
 
-import App from './App.jsx';
+const About = () => (
+  <div>
+    <h1 className="title is-1">About</h1>
+    <hr/><br/>
+    <p>Add something relevant here.</p>
+  </div>
+)
 
-ReactDOM.render((
-  // new
-  <Router>
-    <App />
-  </Router>
-), document.getElementById('root'))
+export default About;
