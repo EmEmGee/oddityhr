@@ -15,7 +15,6 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import App from './App.jsx';
 
 ReactDOM.render((
-  // new
   <Router>
     <App />
   </Router>
